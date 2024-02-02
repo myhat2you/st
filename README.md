@@ -24,8 +24,8 @@ features that make it literally the best terminal emulator ever:
 + Compatibility with `Xresources` and `pywal` for dynamic colors.
 + Default [gruvbox](https://github.com/morhetz/gruvbox) colors otherwise.
 + Transparency/alpha, which is also adjustable from your `Xresources`.
-+ Default font is system "mono" at 14pt, meaning the font will match your
-  system font.
++ Default font is "Hack Nerd Font Mono" from the [nerd-fonts](https://archlinux.org/groups/x86_64/nerd-fonts/) package,
+to be compatible with [nvchad](https://nvchad.com/).
 
 ## Other st patches
 
@@ -36,10 +36,14 @@ features that make it literally the best terminal emulator ever:
 
 ## Installation for newbs
 
-You should have xlib header files and libharfbuzz build files installed.
+You should have `libx11` and `libharfbuzz` installed.
+
+Also install the `nerd-fonts` package used by the font2 patch for compatibility with nvchad.
+
+A composite manager (`xcompmgr`, `picom`, etc.) must be installed and running for transparency.
 
 ```
-git clone https://github.com/LukeSmithxyz/st
+git clone https://github.com/myhat2you/st
 cd st
 sudo make install
 ```
@@ -48,12 +52,6 @@ Obviously, `make` is required to build. `fontconfig` is required for the
 default build, since it asks `fontconfig` for your system monospace font. It
 might be obvious, but `libX11` and `libXft` are required as well. Chances are,
 you have all of this installed already.
-
-On OpenBSD, be sure to edit `config.mk` first and remove `-lrt` from the
-`$LIBS` before compiling.
-
-Be sure to have a composite manager (`xcompmgr`, `picom`, etc.) running if you
-want transparency.
 
 ## How to configure dynamically with Xresources
 
@@ -77,7 +75,7 @@ The `alpha` value (for transparency) goes from `0` (transparent) to `1`
 
 To be clear about the color settings:
 
-- This build will use gruvbox colors by default and as a fallback.
+- This fork uses my own colorscheme.
 - If there are Xresources colors defined, those will take priority.
 - But if `wal` has run in your session, its colors will take priority.
 
