@@ -5,8 +5,15 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
-static char *font2[] = { "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
+static char *font = "Hack Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
+static char *font2[] = { 
+  "Hack Nerd Font Mono:pixelsize=18:antialias=true:autohint=true",
+  "Font Awesome 6 Free:pixelsize=18:antialias=true:autohint=true",
+  "Font Awesome 6 Free Solid:pixelsize=18:antialias=true:autohint=true",
+  "Font Awesome 6 Free Regular:pixelsize=18:antialias=true:autohint=true",
+  "Font Awesome 6 Brands:pixelsize=18:antialias=true:autohint=true",
+  "Font Awesome 6 Brands Regular:pixelsize=18:antialias=true:autohint=true"
+};
 static int borderpx = 2;
 
 /*
@@ -104,7 +111,7 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
 float alpha = 0.8;
@@ -113,22 +120,26 @@ float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+	/* 8 normal colors */
+	"#1C1C1C",	// black
+	"#D42050",	// red
+	"#00BB8F",	// green
+	"#DD4D64",	// orange
+	"#4D6DD0",	// blue
+	"#DA3060",	// magenta
+	"#10A0C8",	// cyan
+	"#B0B0B0",	// gray
+
+	/* 8 bright colors */
+	"#6E6E6E",	// gray
+	"#FF3565",	// red
+	"#10E0B0",	// green
+	"#DD4D64",	// orange
+	"#5C8EF6",	// blue
+	"#FF466A",	// magenta
+	"#10D0E8",	// cyan
+	"#F0F0F0",	// white
+
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
