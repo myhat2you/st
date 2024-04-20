@@ -1,19 +1,19 @@
 # Maintainer:
 
-pkgname=st-luke-git
+pkgname=st-mars-git
 _pkgname=st
 pkgver=0.8.2.r1062.2087ab9
 pkgrel=1
 epoch=1
-pkgdesc="Luke's simple (suckless) terminal with vim-bindings, transparency, xresources, etc. "
-url='https://github.com/LukeSmithxyz/st'
+pkgdesc="Myhat's simple (suckless) terminal with vim-bindings, transparency, xresources, etc. "
+url='https://github.com/Myhat2you/st'
 arch=('i686' 'x86_64')
 license=('MIT')
 options=('zipman')
 depends=('libxft')
 makedepends=('ncurses' 'libxext' 'git')
 optdepends=('dmenu: feed urls to dmenu')
-source=(git+https://github.com/LukeSmithxyz/st)
+source=(git+https://github.com/Myhat2you/st)
 sha1sums=('SKIP')
 
 provides=("${_pkgname}")
@@ -39,7 +39,6 @@ build() {
 package() {
 	cd "${_pkgname}"
 	make PREFIX=/usr DESTDIR="${pkgdir}" install
-	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 	install -Dm644 README.md "${pkgdir}/usr/share/doc/${pkgname}/README.md"
 	install -Dm644 Xdefaults "${pkgdir}/usr/share/doc/${pkgname}/Xdefaults.example"
 }

@@ -9,8 +9,7 @@ static char *font = "Hack Nerd Font Mono:pixelsize=20:antialias=true:autohint=tr
 static char *font2[] = { 
   "Hack Nerd Font Mono:pixelsize=18:antialias=true:autohint=true",
   "Font Awesome 6 Free:pixelsize=18:antialias=true:autohint=true",
-  "Font Awesome 6 Brands:pixelsize=18:antialias=true:autohint=true",
-  "Symbola:pixelsize=18:antialias=true:autohint=true",
+  "Font Awesome 6 Brands:pixelsize=18:antialias=true:autohint=true"
 };
 static int borderpx = 2;
 
