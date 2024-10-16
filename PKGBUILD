@@ -1,12 +1,15 @@
 # Maintainer:
+# Forked from Luke Smith's st repo
+# https://github.com/lukesmithxyz/st
+# Thanks, Luke!
 
-pkgname=st-luke-git
+pkgname=st-mars-git
 _pkgname=st
 pkgver=0.8.2.r1062.2087ab9
 pkgrel=1
 epoch=1
-pkgdesc="Luke's simple (suckless) terminal with vim-bindings, transparency, xresources, etc. "
-url='https://github.com/LukeSmithxyz/st'
+pkgdesc="Myhat's simple (suckless) terminal with vim-bindings, transparency, xresources, etc. "
+url='https://github.com/Myhat2you/st'
 arch=('i686' 'x86_64')
 license=('MIT')
 options=('zipman')
